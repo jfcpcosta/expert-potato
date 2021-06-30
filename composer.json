@@ -12,7 +12,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Flag\\": "src/Flag"
+            "Potato\\": "src/Potato"
         }
     },
     "require": {}

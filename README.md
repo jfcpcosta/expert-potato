@@ -1,4 +1,4 @@
-# Flag PHP Framework
+# Expert Potato PHP Framework
 
 Criada no contexto das aulas de web development
 
