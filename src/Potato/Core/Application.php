@@ -2,6 +2,7 @@
 
 use Potato\Http\Errors\HttpException;
 use Potato\Http\Errors\InternalServerErrorException;
+use Potato\Http\Response;
 use Potato\Router\Model\Route;
 use Potato\Router\Router;
 use ReflectionClass;
@@ -26,7 +27,7 @@ class Application {
             $code = $e->getCode();
             $message = $e->getMessage();
 
-            header("HTTP/1.1 $code $message");
+            Response::status($code, $message);
             die($code . " " . $message);
         }
     }

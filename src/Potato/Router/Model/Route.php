@@ -2,20 +2,20 @@
 
 class Route {
 
-    private $endpoint;
+    private $route;
     private $controller;
     private $action;
     private $data;
 
     public function __construct(string $route, array $data = [])
     {
-        $this->endpoint = $route;
+        $this->route = $route;
         $this->data = $data;
         $this->parse();
     }
 
     private function parse(): void {
-        $parts = explode('::', $this->endpoint);
+        $parts = explode('::', $this->route);
         $this->controller = $parts[0];
         $this->action = $parts[1];
     }
